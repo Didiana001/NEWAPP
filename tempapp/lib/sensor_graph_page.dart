@@ -29,8 +29,8 @@ class SensorGraphPage extends StatelessWidget {
                 spots: List.generate(sensorData.length, (index) {
                   return FlSpot(index.toDouble(), double.parse(sensorData[index].temperature));
                 }),
-                isCurved: true,
-                colors: [const Color.fromARGB(255, 219, 155, 182)], // Corrected here
+                isCurved: true,  // This makes the line smooth
+                color: const Color.fromARGB(255, 219, 155, 182),
                 barWidth: 2,
                 isStrokeCapRound: true,
                 belowBarData: BarAreaData(show: true),
@@ -39,13 +39,13 @@ class SensorGraphPage extends StatelessWidget {
                 spots: List.generate(sensorData.length, (index) {
                   return FlSpot(index.toDouble(), double.parse(sensorData[index].humidity));
                 }),
-                isCurved: true,
-                colors: [const Color.fromARGB(255, 107, 206, 148)], // Corrected here
+                isCurved: true,  // This makes the line smooth
+                color: const Color.fromARGB(255, 107, 206, 148),
                 barWidth: 2,
                 isStrokeCapRound: true,
                 belowBarData: BarAreaData(show: true),
               ),
-            ]
+            ],
           ),
         ),
       ),
